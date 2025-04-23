@@ -1,0 +1,13 @@
+name: lifestyle1
+plugins:
+  - name: hexo-render-pug
+    config:
+      pug:
+        cache: true
+  - name: hexo-renderer-stylus
+  - name: hexo-generator-seo-friendly-sitemap
+    config:
+     sitemap:
+      path: sitemap.xml
+layouts:
+  - name: index

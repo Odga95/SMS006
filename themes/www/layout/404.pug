@@ -1,0 +1,15 @@
+extends includes/layout
+
+block body-header
+  include includes/header
+
+block body-main
+  .container-tag
+    .tag-list
+      .tags
+        img(src="/img/error.webp", alt="")
+        h1.color-second 404
+        p.font-xs.color-first Página no encontrada o la página no existe.
+
+block body-footer
+  include includes/footer

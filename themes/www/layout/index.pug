@@ -1,0 +1,66 @@
+extends includes/layout
+
+block body-header
+  include includes/header
+
+block head-meta
+
+block head-title
+
+block body-main
+  //- Contenedor del blog
+  .blog 
+    .blogs
+      h1 Blog
+      //- Blog content - cards
+      .card-blog
+        a.image(href="#")
+          img(src="https://img.freepik.com/foto-gratis/surtido-coloridas-hojas-secas-otono_23-2150708379.jpg?w=996&t=st=1692291645~exp=1692292245~hmac=e888980b53f5fa8f510cdc27c87800021dddc5da7fb2ffef607e78d19911d6ab", alt="")
+        .info 
+          .fa-solid.fa-tags
+          a(href="#") tag 
+        .content
+          a(href="#").content-title Titulo
+          hr
+          a(href="#").content-text Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel fuga dolor quidem aperiam aspernatur dignissimos officiis voluptatibus suscipit nisi aliquam odit pariatur, cupiditate illum saepe, accusantium quam ducimus praesentium magni.
+      hr
+      .card-blog
+        a.image(href="#")
+          img(src="https://img.freepik.com/vector-gratis/fondo-otono-dibujado-mano-mezcla-hojas_23-2148615374.jpg?w=1380&t=st=1692291690~exp=1692292290~hmac=bd3db335cbfe4a45faadc2206f7a7b64b7eac40dbba9ba9e9bbf58ed1dc82ab2", alt="")
+        .info 
+          .fa-solid.fa-tags
+          a(href="#") tag 
+        .content
+          a(href="#").content-title Titulo
+          hr
+          a(href="#").content-text Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel fuga dolor quidem aperiam aspernatur dignissimos officiis voluptatibus suscipit nisi aliquam odit pariatur, cupiditate illum saepe, accusantium quam ducimus praesentium magni.
+      hr
+
+    .sidebar
+      .cat-tag
+        h3 Tags
+        ul 
+          li 
+            a(href="#")  Computer
+          li 
+            a(href="#")  Sistems 
+          li 
+            a(href="#")  Stationery blue
+          li 
+            a(href="#")  Web designer 
+            
+      .cat-tag
+        h3 Category
+        ul 
+          li 
+            a(href="#")  Computer
+          li 
+            a(href="#")  Sistems 
+          li 
+            a(href="#")  Stationery blue
+          li 
+            a(href="#")  Web designer 
+
+
+block body-footer
+  include includes/footer

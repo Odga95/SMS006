@@ -1,0 +1,42 @@
+doctype html
+html(lang='es')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0, minimun-scale=1.0')
+    block head-meta
+
+    block head-title
+    //- Cdn fontawsome
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer")
+
+    link(rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css")
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js")
+    script(src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js")
+
+    script(src='https://cdn.tailwindcss.com')
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    a(href="https://api.whatsapp.com/send?phone=51955081075&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202." class="float" target="_blank")
+      .fa.fa-whatsapp.my-float
+
+    //- link(href='/favicon.ico' type='image/x-icon' rel='shortcut icon')
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin)
+    link(href='https://fonts.googleapis.com/css2?family=Aclonica&family=Josefin+Sans:wght@300&display=swap' rel='stylesheet')
+    link(rel='stylesheet' href='/css/style.css')
+    link(rel='stylesheet' href='/css/custom.css')
+
+    block head-link
+
+
+  body
+    block body-header
+    block body-main
+    block body-footer
+    //- script(type='application/javascript').
+    //-   var apiUrl = !{JSON.stringify(config.apiUrl)};
+    //-   var siteId = !{JSON.stringify(config.site)};
+    //-   var contactUrl = apiUrl + '/sites/' + siteId + '/contact';
+    //-   console.log(contactUrl);
+
+    script(src='/js/general.js')

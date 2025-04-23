@@ -1,0 +1,434 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;900&display=swap');
+  
+font-xs = 0.8em
+font-s = 1.0em
+font-m = 1.6em
+font-l = 2em
+font-xl = 2.8em
+font-xxl = 3.5em
+
+fontfamletter = var(--fontfamletter)
+fontfamTitles = var(--fontfamTitles)  
+
+:root {
+  --color-white: #ffffff
+  --color-black: #000 
+  --color-letter:#706d6d
+  --color-first:#512A69
+  --color-second: #c094ff
+  --color-third: #f3d549
+
+  --fontfamTitles : 'Roboto', sans-serif;
+  --fontfamletter : 'Roboto', sans-serif;
+
+} 
+
+color-white = var(--color-white)
+color-black = var(--color-black)
+color-letter =var(--color-letter)
+color-first = var(--color-first)
+color-second = var(--color-second)
+color-third = var(--color-third)
+color-fourth =var(--color-fourth)
+color-footer =var(--color-footer)
+
+
+movil = 'screen and (min-width: 576px)'
+tablet = 'screen and (min-width: 769px)'
+escritorio-xs = 'screen and (min-width: 850px)'
+escritorio-s = 'screen and (min-width: 992px)'
+escritorio-m = 'screen and (min-width: 1200px)'
+escritorio-l = 'screen and (min-width: 1400px)'
+
+*
+  margin 0px
+  padding 0px
+  -webkit-box-sizing border-box!important
+  -moz-box-sizing border-box!important
+  box-sizing border-box!important
+
+vendor(prop, args)
+  -webkit-{prop} args
+  -moz-{prop} args
+  {prop} args
+
+border-radius()
+  vendor('border-radius', arguments)
+
+transform()
+  vendor('transform', arguments)  
+
+transition()
+  vendor('transition', arguments)
+
+//Colores
+
+.color-white
+  color color-white
+.color-black
+  color color-black
+.color-letter
+  color color-letter
+.color-first
+  color color-first
+.color-second
+  color color-second
+.color-third
+  color color-third
+.color-fourth
+  color color-fourth
+.color-fifth
+  color color-fifth
+
+//Letras
+
+.fontfam1
+  font-family fontfam1
+.fontfam2
+  font-family fontfam2
+
+.font-xs
+  font-size font-xs
+.font-s
+  font-size font-s
+.font-m
+  font-size font-m
+.font-l
+  font-size font-l
+.font-xl
+  font-size font-xl
+.font-xxl
+  font-size font-xxl
+
+
+//Estilos
+
+body
+  color color-letter
+  font-family fontfamletter
+  font-size font-s
+  h1
+    font-size: font-xxl
+  h2
+    font-size: font-xl
+  h3
+    font-size: font-l
+  h4
+    font-size: font-m
+  h5
+    font-size: font-s
+  h6
+    font-size: font-s
+  p
+    font-size: font-s
+  a 
+    text-decoration: none
+    color color-letter
+    &:hover
+      color color-third
+      transition 0.2s
+
+.hover
+  &:hover
+    color color-first
+
+
+.container
+  max-width 1600px
+  width: 100%
+  margin auto
+
+.content 
+  max-width 1280px
+  margin auto
+  padding: 0px 10px
+  @media tablet
+    padding: 0px 20px
+
+// floating button
+.float
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:50%;
+	right:20px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+
+.float
+  z-index 100
+  font-size: 29px
+
+.my-float
+	margin-top:16px;
+
+.shadow
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0, 0.2);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+
+/////////////////////////////////////////////////////
+////////////////////////BLOG/////////////////////////
+/////////////////////////////////////////////////////
+
+.blog 
+  max-width: 1400px
+  margin: auto
+  display: flex
+  padding: 50px 0px
+  flex-direction: row
+  justify-content: space-around
+  flex-direction: column
+  @media tablet
+    flex-direction: row
+  
+  .blogs
+    display: flex
+    justify-content: center
+    align-items: left
+    gap 10px
+    width: 100%
+    flex-direction: column
+    -webkit-box-shadow: 0px 0px 13px 0px rgba(192, 148, 255, 0.2);
+    -moz-box-shadow: 0px 0px 13px 0px rgba(192, 148, 255,0.2);
+    box-shadow: 0px 0px 13px 0px rgba(192, 148, 255,0.2);
+    padding: 20px
+    @media tablet
+      width: 70%
+    //- Blog content - cards
+    h1
+      color color-first
+      font-family: fontfamTitles
+      font-weight: 500
+    hr
+      width: 80%
+      margin auto
+      margin-bottom: 15px
+      border: 0.2px solid rgb(225, 225, 255)
+    .card-blog
+      display: flex
+      flex-direction: column
+      justify-content: left
+      align-items: left
+      width: 100%
+      height: 100%
+      padding: 10px 10px 
+      margin-top: 15px
+      @media tablet
+        padding: 10px 30px
+      @media escritorio-s
+        padding: 10px 50px
+      .image
+        margin auto
+        width: 100%
+        height: 350px
+        @media tablet
+          width: 90%
+        @media escritorio-s
+          width: 80%
+        img
+          width: 100%
+          height: 100%
+          object-fit: cover
+      .info,.content
+        display: flex
+        justify-content: left
+        gap 5px
+        padding: 10px 10px
+        width: 100%
+        margin auto
+        @media movil
+          padding: 10px 15px
+        @media tablet
+          width: 90%
+          padding: 10px 20px
+        @media escritorio-s
+          padding: 5px 35px
+          width: 80%
+        hr
+          width: 10%
+          border 0.5px solid color-second
+          margin-bottom: 5px
+          margin-left: 0
+          @media tablet
+            width: 12%
+          @media escritorio-s
+            width: 10%
+            
+        .fa-solid
+          color color-second
+          font-size: font-xs
+        a 
+          font-size: font-xs
+          color color-black
+      .info
+        align-items: center
+        a
+          color color-first
+
+      .content
+        flex-direction: column
+        .content-title,.content-text
+          color color-first
+          font-size: font-m
+        .content-text
+          margin auto
+          color color-black
+          font-size: font-s
+          
+          
+  .sidebar
+    -webkit-box-shadow: 0px 0px 13px 0px rgba(192, 148, 255, 0.2);
+    -moz-box-shadow: 0px 0px 13px 0px rgba(192, 148, 255, 0.2);
+    box-shadow: 0px 0px 13px 0px rgba(192, 148, 255, 0.2);
+    width: 100%
+    display: flex
+    flex-direction: column
+    @media tablet
+      width: 25%
+    .cat-tag
+      width: 100%
+      height: fit-content
+      margin-bottom: 30px
+      padding: 10px 10px
+      @media tablet
+        padding: 10px 30px
+      @media escritorio-s
+        padding: 10px 50px
+      ul
+        li
+          list-style: none
+          padding: 10px 0px
+          a
+            color color-black
+        li::before
+          content: "-"
+          font-size: 110%
+          font-weight: 900
+          margin-right: 5px
+          color color-black
+        li:hover a
+          color color-first
+        li:hover::before
+          color color-first
+      h3 
+        color color-second
+        margin-bottom: 10px
+      
+
+
+/////////////////////////////////////////////////////
+/////////////////////// TAG /////////////////////////
+/////////////////////////////////////////////////////
+
+.container-tag
+  width: 100%
+  height: 100%
+  .tag-list
+    max-width: 965px
+    margin auto
+    min-height: 50vh
+    padding: 30px
+    display: flex
+    justify-content: center
+    align-items: center
+    .tags
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      img
+        width 100%
+        height: auto
+      p
+        text-align: center
+        font-weight: 700
+      h2 
+        margin 70px
+        color color-first
+      ul
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+        width: 100%
+        gap 10px
+        margin-bottom: 40px
+        li  
+          list-style: none
+          padding: 10px 20px
+          background: color-second
+          a
+            color color-white
+
+
+.banner-page
+  height: 50vh
+  width 100%
+
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+
+.page
+  padding: 70px 20px
+  display: flex
+  flex-direction: column
+  @media tablet
+    padding 70px 70px 
+  h1
+    color color-second
+    margin-bottom: 40px
+    font-size: font-xl
+  h2
+    color color-first
+    font-size font-l
+    margin 30px 0px
+  width: 100%
+  height: 100%
+  img
+    width: 95%
+    height: auto
+    object-fit: cover
+    margin 40px auto 40px
+    @media tablet
+      width: 85%
+    @media escritorio-xs
+      width: 80%
+  p 
+    color color-letter
+    margin-bottom: 20px
+  a 
+    text-decoration: none
+    font-size: font-s
+    color color-first
+  ul 
+    width: 100%
+    li
+      list-style: none
+      margin-left 20px
+      display: flex
+      p
+        color color-letter
+        text-decoration: none
+        margin-bottom: 0px
+    li::before
+      content "\2022"
+      color color-first
+      font-weight bold
+      display inline-block
+      width 1em
+      margin-left -1em
+  .mapsite
+    margin 20px 0px
+    li
+      margin-left: 20px
+      list-style: none
+      color: color-letter
+    li::before
+      content: ""
+

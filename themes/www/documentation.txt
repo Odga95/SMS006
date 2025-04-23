@@ -1,0 +1,2 @@
+Tamaño de la imagen de cabecera
+1414px x 640px
